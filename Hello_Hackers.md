@@ -10,8 +10,7 @@ To complete this challenge, I needed to invoke the `hello` command. This command
 
 ###Solution
 I typed in the following command:
-```bash
-hello
+`hello`
 Once I typed it in and hit Enter, I received the flag.
 
 ##2. Intro to Arguments
@@ -24,6 +23,5 @@ The task required me to run the hello command with a single argument hackers. I 
 
 
 I typed in the following command:
-```bash
-hello hackers
+`hello hackers`
 Once I typed it in and hit Enter, I received the flag.
