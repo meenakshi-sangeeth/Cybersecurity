@@ -176,7 +176,7 @@ To collect the flag which is hidden using the following instructions:
 
 I knew that I'll have to navigate to `/` using cd after which I'll have to list the files using `ls`. Then I'll have to read the file which is named something along the lines of HINT or CLUE using `cat` command
 
-###Solution
+### Solution
 
 I used the following commands
 ```bash
