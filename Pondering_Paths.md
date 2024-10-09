@@ -87,7 +87,7 @@ After that I executed the command `/challenge/run` which gave me the flag
 
 ## 5. Position Yet Elsewhere
 
-## Challenge
+### Challenge
 
 To collect the flag by executing the `/challenge/run` program from a specific path 
 
