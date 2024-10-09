@@ -1,223 +1,120 @@
 # File Globbing
 
-## 1. Redirecting Output
+## 1. Matching With *
 
 ### Challenge
 
-To collect the flag by writing the word PWN to the filename COLLEGE using `>`
+To collect the flag by running `/challenge/run` after changing your directory to `/challenge`, using `*` glob to keep the argument you pass to `cd` to at most four characters
 
 ### Thought Process
 
-I knew that `>` is used to redirect stdout to files. Thus if I use `>` between `echo PWN` and `COLLEGE`, I'll be able to complete the challenge
+I knew that when `*` character is encountered in any argument, the shell will treat it as "wildcard" and try to replace that argument with any files that match the pattern. Thus if make use of `*`, I can limit the characters of argument to at most four
 
 ### Solution
 
 I used the following command
 ```bash
-echo PWN > COLLEGE
+cd /ch*
+```
+Upon execution, the directory was changed to `/challenge`. After that I used the following command
+```bash
+/challenge/run
 ```
 Upon execution, I got the flag
 
-## 2. Redirecting More Output
+## 2. Matching With ?
 
 ### Challenge
 
-To collect the flag after redirecting the output of `/challenge/run` to the file `myflag`
+To collect the flag by running `/challenge/run` after changing your directory to `/challenge`, using `?` glob instead of c and l in the argument to `cd` 
 
 ### Thought Process
 
-I knew that `>` can be used to redirect the output of any command. Thus if I use `>` between `/challenge/run` and `myflag`, I'll be able to redirect the output as the challenge requires
+I knew that when `?` character is encountered in any argument, the shell will treat it as single-character wildcard and try to replace that argument with any files matching that single character 
 
 ### Solution
 
 I used the following commands
 ```bash
-/challenge/run > myflag
-cat myflag
+cd /?ha??enge
+```
+Upon execution, the directory was changed to `/challenge`. After that I used the following command
+```bash
+/challenge/run
 ```
 Upon execution, I got the flag
 
-## 2. Appending Output
+## 3. Matching With [ ]
 
 ### Challenge
 
-To collect the flag by running `/challenge/run` with an append-mode redirect of the output to the file /home/hacker/the-flag
+To collect the flag by changing your working directory to `/challenge/files` and run `/challenge/run` with a single argument that bracket-globs into `file_b`, `file_a`, `file_s`, and `file_h`
 
 ### Thought Process
 
-I knew that `>>` should be used if I want the output of a bunch of commands to keep appending to the same file since `>` will create a new output file every time, deleting the old contents
+I knew that `[ ]` is a wildcard for a subset of potential characters, specified within the brackets. Thus if I specify "bash" within `[ ]` I'll be able to meet the requirements of the challenge since one character of all the mentioned files is present in "bash"
 
 ### Solution
 
 I used the following commands
 ```bash
- /challenge/run >> /home/hacker/the-flag
-cat /home/hacker/the-flag
+cd /challenge/files
+/challenge/run file_[bash]
 ```
 Upon execution, I got the flag
 
-## 3. Redirecting Error
+## 4. Matching Paths With [ ]
 
 ### Challenge
 
-To collect the flag by redirecting the output of `/challenge/run`, to `myflag` and the errors  to `instructions`
+To collect the flag by running `/challenge/run` from home directory with a single argument that bracket-globs into the absolute paths to the `file_b`, `file_a`, `file_s`, and `file_h` files placed in `/challenge/files`
 
 ### Thought Process
 
-I knew that if there's a command that might produce data via standard error, I  can redirect standard error (FD 2) to the a file using `2>` between the command and the file
+I recalled that globbing can happen on a path basis as well. So, I can expand entire paths with `[ ]` thereby meeting the requirement of the challenge. Since one character of all the mentioned files is present in "bash", I can use `[bash]`
 
 ### Solution
 
 I used the following commands
 ```bash
-/challenge/run > myflag 2> instructions
-cat myflag
+/challenge/run /challenge/files/file_[bash]
 ```
 Upon execution, I got the flag
 
-## 4. Redirecting Input
+## 5. Mixing Globs
 
 ### Challenge
 
-To collect the flag by redirecting the PWN file to `/challenge/run` and have the PWN file contain the value COLLEGE
+To collect the flag by changing the directory to `/challenge/files` and write a single, short (6 characters or less) glob that will match the files "challenging", "educational", and "pwning"
 
 ### Thought Process
 
-I knew that I can redirect input to programs using `<` and I recalled that for output redirection I'll have to use `>`. Thus for the PWN file to contain COLLEGE I'll have to use `>` and to redirect PWN file to `/challenge/run`, I'll have to use `<`
+Since there's no common pattern of characters in the files mentioned, I figured I'll have to use a comination of `[ ]` and `*` globs and pass "cep" to `[ ]` which will meet the requirements of the challenge
 
 ### Solution
 
 I used the following commands
 ```bash
-echo COLLEGE > PWN
-/challenge/run < PWN
+cd /challenge/files
+/challenge/run [cep]*
 ```
 Upon execution, I got the flag
 
-## 5. Grepping Stored Results
+## 6. Exclusionary Globbing
 
 ### Challenge
 
-To collect the flag by following the given instructions:
-1. Redirect the output of `/challenge/run` to `/tmp/data.txt`
-2. This will result in a hundred thousand lines of text, with one of them being the flag, in `/tmp/data.txt`
-3. Grep that for the flag!
+To collect the flag by running `/challenge/run` with all files that don't start with "p", "w", or "n" after changing your directory to `/challenge`
 
 ### Thought Process
 
-I knew that redirecting of the output can be done using `>` and searching through the resulting file using `grep`
+I recalled that if the first character in the brackets is a `!` or (in newer versions of bash) a `^`, the glob inverts, and that bracket instance matches characters that aren't listed. Thus I figured I'll have to use `!` or `^` to match with the files that don't start with "p", "w", or "n"
 
 ### Solution
 
-I used the following command
+I used the following commands
 ```bash
-/challenge/run > /tmp/data.txt
-```
-As mentioned in the challenge, the execution of the above command lead to an output of hundred thousand lines of text, through which I searched for the flag using the following command
-```bash
-grep "pwn.college" /tmp/data.txt
-```
-Upon execution, I got the flag
-
-## 6. Grepping Live Output
-
-### Challenge
-
-To collect the flag by grepping for it after running `/challenge/run` using pipe operator
-
-### Thought Process
-
-I knew that standard output from the command to the left of the pipe operator will be connected to (piped into) the standard input of the command to the right of the pipe. Thus if I use `|` (pipe) operator between `/challenge/run` and `grep` I'll be able to meet the requirements of the challenge
-
-### Solution
-
-I used the following command
-```bash
-/challenge/run | grep pwn.college 
-```
-Upon execution, I got the flag
-
-## 7. Grepping Errors
-
-### Challenge
-
-To collect the flag by grepping through the errors after running `/challenge/run` using pipe operator
-
-### Thought Process
-
-I recalled that if I have to grep through errors, first, I'll have to redirect standard error to standard output (2>& 1) and then pipe the now-combined stderr and stdout as normal (|)
-
-### Solution
-
-I used the following command
-```bash
-/challenge/run 2>&1 | grep "pwn.college"
-```
-Upon execution, I got the flag
-
-## 8. Duplicating Piped Data With Tee
-
-### Challenge
-
-To collect the flag by piping `/challenge/pwn` into `/challenge/college` after intercepting the data to see what pwn needs from you
-
-### Thought Process
-
-I knew that `tee` command duplicates data flowing through your pipes to any number of files provided on the command line. Thus for intercepting the data I'll have to use `tee`
-
-### Solution
-
-I used the following command
-```bash
-/challenge/pwn | tee code | /challenge/college
-cat code
-```
-Upon execution, I got the following output
-```bash
-Usage: /challenge/pwn-secret [SECRET_ARG]
-SECRET_ARG should be "kNkC3zyg"
-```
-Thus I used the following command
-```bash
-/challenge/pwn--secret kNkC3zyg | /challenge/college
-```
-Upon execution, I got the flag
-
-## 9. Writing To Multiple Programs
-
-### Challenge
-
-To collect the flag by running `/challenge/hack` and duplicating its output as input to both the `/challenge/the` and the `/challenge/planet` commands
-
-### Thought Process
-
-In order to duplicate the output of `/challenge/hack` into both `/challenge/the` and the `/challenge/planet` , I knew I would have to make use of process substitution with the command `tee`
-
-### Solution
-
-I used the following command
-```bash
-/challenge/hack | tee >( /challenge/the ) >( /challenge/planet )
-```
-Upon execution, I got the flag
-
-## 10. Split - Piping Stderr And Stdout
-
-### Challenge
-
-To collect the flag by combining the usage of `>()`, `2>`, and `|` with the following:
-- `/challenge/hack`: this produces data on stdout and stderr
-- `/challenge/the`: you must redirect hack's stderr to this program
-- `/challenge/planet`: you must redirect hack's stdout to this program
-
-### Thought Process
-
-In order to redirect stderr of `/challenge/hack` to I'll have to use `2>` as well as process substitution `>()` to feed the `stderr` output into `/challenge/the`. After that `|` operator should be used to pipe stdout of `/challenge/hack` into `/challenge/planet`
-
-### Solution
-
-I used the following command
-```bash
-/challenge/hack 2> >( /challenge/the ) | /challenge/planet
+ cd /challenge/files
+/challenge/run [!pwn]*
 ```
 Upon execution, I got the flag
