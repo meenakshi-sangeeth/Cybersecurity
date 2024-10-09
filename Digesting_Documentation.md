@@ -98,7 +98,7 @@ man challenge
 ```
 Upon execution, I got the manpage comprising of a large number of lines. I figured I'll have to search through the manpage in order to find the right argument. I tried hitting *n* and the part of lines containing "flag" were highlighted. Thus I kept hitting *n* until I found the following line
 
-![Image](cryptonite_taskphase_meenakshi/Screenshot 2024-10-09 173014.png)
+![cryptonite_taskphase_meenakshi/Screenshot 2024-10-09 173014.png](https://github.com/meenakshi-sangeeth/cryptonite_taskphase_meenakshi/blob/main/Screenshot%202024-10-09%20173014.png)
 
 
 Then I used the following command
