@@ -1,6 +1,6 @@
 # Chaining Commands
 
-## 1. Chaining WIth Semicolons
+## 1. Chaining With Semicolons
 
 ### Challenge
 
