@@ -54,4 +54,4 @@ Thus the flag for this challenge is picoCTF{beep_boop_im_in_space}
 
 ## Incorrect Tangents
 
-Initially I tried using the wrong SSTV modes without paying attention to the hint and thus wasted a lot of time![image](https://github.com/user-attachments/assets/f9198d0c-7fdc-4f82-b9b9-e551d50ccd37)
+Initially I tried using the wrong SSTV modes without paying attention to the hint and thus wasted a lot of time
