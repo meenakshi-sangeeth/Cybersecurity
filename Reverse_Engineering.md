@@ -46,7 +46,7 @@ Therefore, the flag for this challenge is picoCTF{549698}
 
 	- In assembly language, AT&T and Intel syntax are two different formats for writing assembly code instructions. The following is a brief overview of both the formats
 		- Order of Operands
-		* Intel Syntax: `destination, source``
+		* Intel Syntax: `destination, source`
 			Example: `mov eax, ebx` (move the contents of `ebx` into `eax`)
 		* AT&T Syntax: `source, destination`
 			Example: `movl %ebx, %eax` (same instruction, but the source comes first)
