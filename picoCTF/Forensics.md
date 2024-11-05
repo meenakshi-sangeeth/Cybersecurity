@@ -26,6 +26,7 @@ I launched PulseAudio Volume Control using the command `pavucontrol`
 ![Img](cryptonite_taskphase_meenakshi/ 1.png)
 
 After that I launched QSSTV using the command `qsstv`
+
 ![Img](cryptonite_taskphase_meenakshi/ 2.png)
 
 Once launched, I did the following:
