@@ -27,22 +27,22 @@ I launched PulseAudio Volume Control using the command `pavucontrol`
 
 After that I launched QSSTV using the command `qsstv`
 
-![Img](cryptonite_taskphase_meenakshi/ 2.png)
+![image](https://github.com/user-attachments/assets/420b7d4c-e3a8-4f15-884a-2192593c6e14)
 
 Once launched, I did the following:
 Options → Configuration → Sound → Select PulseAudio as the Audio Interface
-![Img](cryptonite_taskphase_meenakshi/ 3.png)
-![Img](cryptonite_taskphase_meenakshi/ 4.png)
+![image](https://github.com/user-attachments/assets/f6e308a5-97b0-4331-bb98-5b87222c2d51)
+![image](https://github.com/user-attachments/assets/f30df8c4-66b8-444a-8209-1f34a6122beb)
 Click Ok.
 
 Then I went back to PulseAudio and in the Recording tab, I set QSSTV to  “Monitor of Null Output”
-![Img](cryptonite_taskphase_meenakshi/ 5.png)
+![image](https://github.com/user-attachments/assets/085cfece-bfe5-4058-b0dd-06b03fdaa72d)
 
 To set the mode I went back to QSSTV and selected Scottie 1 mode under Mode and enabled Auto Slant
 ![Img](cryptonite_taskphase_meenakshi/ 6.png)
 
 To play the audio file, I executed `paplay -d virtual-cable message.wav` which gave me the following output
-![Img](cryptonite_taskphase_meenakshi/ 7.png)
+![image](https://github.com/user-attachments/assets/085cfece-bfe5-4058-b0dd-06b03fdaa72d)
 
 Thus the flag for this challenge is picoCTF{beep_boop_im_in_space}
 
