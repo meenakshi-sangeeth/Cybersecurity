@@ -23,7 +23,7 @@ pactl load-module module-null-sink sink_name=virtual-cable
 ```
 
 I launched PulseAudio Volume Control using the command `pavucontrol`
-![Img](cryptonite_taskphase_meenakshi/ 1.png)
+![image](https://github.com/user-attachments/assets/8918f9d9-5a84-489c-b5f3-5b697196a357)
 
 After that I launched QSSTV using the command `qsstv`
 
