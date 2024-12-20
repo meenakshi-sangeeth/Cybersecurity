@@ -42,7 +42,7 @@ To set the mode I went back to QSSTV and selected Scottie 1 mode under Mode and 
 ![Img](cryptonite_taskphase_meenakshi/ 6.png)
 
 To play the audio file, I executed `paplay -d virtual-cable message.wav` which gave me the following output
-![image](https://github.com/user-attachments/assets/085cfece-bfe5-4058-b0dd-06b03fdaa72d)
+![image](https://github.com/user-attachments/assets/ec3873be-a6f8-45d1-a6fe-5971dc0bb7d3)
 
 Thus the flag for this challenge is picoCTF{beep_boop_im_in_space}
 
