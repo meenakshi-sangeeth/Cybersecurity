@@ -27,6 +27,7 @@ I launched PulseAudio Volume Control using the command `pavucontrol`
 ![image](https://github.com/user-attachments/assets/8918f9d9-5a84-489c-b5f3-5b697196a357)
 
 After that I launched QSSTV using the command `qsstv`. Once launched, I did the following: Options → Configuration → Sound → Select PulseAudio as the Audio Interface
+
 ![image](https://github.com/user-attachments/assets/420b7d4c-e3a8-4f15-884a-2192593c6e14)
 ![image](https://github.com/user-attachments/assets/f6e308a5-97b0-4331-bb98-5b87222c2d51)
 
