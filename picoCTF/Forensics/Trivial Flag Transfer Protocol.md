@@ -12,14 +12,17 @@ What are some other ways to hide data?
 
 I donwloaded the attached file and found that it was pcapng file. Now I had no idea what a pcapng file is or how to analyse it. So I did some research and I found out that pcapng file (Packet Capture Next Generation file) is basically a file format that stores captured network traffic data. Think of it like a "recording" of all the messages sent and received over a network during a specific time.It helps analyze network activity to find problems, understand how data moves, or uncover hidden information (like in CTF challenges).
 Wireshark is a free and widely used ool that lets you see all the messages (called "packets") being sent and received over a network. Thus wireshark can be used to filter and inspect the packets in the given pcapng file. I donwloaded wireshark and opened the file in it
+
 ![image](https://github.com/user-attachments/assets/691f9783-012b-405f-8081-8628850c948a)
 
 As you can see most of the network traffic here are TFTP. I did some research on TFTP as well and this is what I got to know. TFTP (Trivial File Transfer Protocol) is a file transfer protocol without the need of authentication and data encryption making it "trivial". It’s fast and easy to use but not secure. 
 
 So now knowing what TFTP is, I filtered the traffic to see what were sent and received
+
 ![image](https://github.com/user-attachments/assets/52506f47-a261-4bb7-91ca-f5316cd5d95d)
 
 The transferred files are “instructions.txt”, “plan”, "program.deb", “picture1.bmp”, “picture2.bmp”, “picture3.bmp”. Now let’s export all of them by clicking File -> Export Object -> TFTP
+
 ![image](https://github.com/user-attachments/assets/bf51033d-ea04-4db7-b1d2-86e31d371d36)
 
 I opened “instructions.txt” which contained the following string inside
