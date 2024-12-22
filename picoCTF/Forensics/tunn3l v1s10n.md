@@ -10,13 +10,13 @@ Weird that it won't display right...
 
 ## Thought Process
 
-I opened the attached file and it contained "BM" followed by characters that didn't make any sense. On Googling, I figured out that the donwloaded file is actually a bitmap image file. The "BM" at the start is part of the file header and indicates the file is in the BMP format. So I changed the extension of the file to bmp but alas that wasn't fruitful. I was clueless as to how to proceed so I referred to [this][https://trailofbits.github.io/ctf/forensics/]. I figured I might have to perform hex analysis and thus I uploaded the image to an [online hex editor][https://hexed.it/]. 
+I opened the attached file and it contained "BM" followed by characters that didn't make any sense. On Googling, I figured out that the donwloaded file is actually a bitmap image file. The "BM" at the start is part of the file header and indicates the file is in the BMP format. So I changed the extension of the file to bmp but alas that wasn't fruitful. I was clueless as to how to proceed so I referred to [this](https://trailofbits.github.io/ctf/forensics/). I figured I might have to perform hex analysis and thus I uploaded the image to an [online hex editor](https://hexed.it/) 
 
 ![image](https://github.com/user-attachments/assets/1782d36b-222d-4720-be3b-75f4d9c543cb)
 
 ## Solution
 
-To know if the current file is in the correct format or not I have to compare it with the right one and for that I Googled and found [this][https://en.wikipedia.org/wiki/BMP_file_format] 
+To know if the current file is in the correct format or not I have to compare it with the right one and for that I Googled and found [this](https://en.wikipedia.org/wiki/BMP_file_format) 
 
 ![image](https://github.com/user-attachments/assets/fecacc2e-2ed7-4941-9e25-5eac54e5a80c)
 
