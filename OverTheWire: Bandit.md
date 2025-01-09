@@ -66,3 +66,58 @@ strings data.txt | grep "="
 ```bash
 base 64 -d data.txt
 ```
+
+## Level 11 -> Level 12
+```bash
+cat data.txt
+```
+Decoded the rot13 string using an online platform
+
+## Level 12 -> Level 13
+```bash
+cat data.txt
+mkdir /temp/overthewire
+cp data.txt /temp/overthewire
+cd /temp/overthewire
+ls
+xxd -r data.txt > data
+ls
+file data
+mv data file.gz
+gzip -d file.gz
+ls
+file file
+mv file file.bz2
+bzip2 -d file.bz2
+ls
+file file
+mv file fie.gz
+gzip -d file.gz
+ls
+file file
+mv file file.tar
+tar xf file.tar
+ls
+file data5.bin
+mv data5.bin data.tar
+tar xf data.tar
+ls
+file data6.bin
+mv data6.bin data.bz2
+bzip2 -d data.bz2
+ls
+file data
+mv data data.tar
+ls
+tar xf data.tar
+ls
+file data8.bin
+mv data8.bin data.gz
+gzip -d data.gz
+ls
+file data
+cat data
+```
+## Level 13 -> Level 14
+
+```bash
