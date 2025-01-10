@@ -121,3 +121,28 @@ cat data
 ## Level 13 -> Level 14
 
 ```bash
+ssh -i sshkey.private bandit14@localhost
+cat /etc/bandit_pass/bandit14
+```
+
+## Level 14 -> Level 15
+
+```bash
+nc localhost 30000
+```
+
+## Level 15 -> Level 16
+
+```bash
+cat /etc/bandit_pass/bandit15
+ncat --ssl localhost 30001
+```
+
+## Level 16 -> Level 17
+
+```bash
+cat /etc/bandit_pass/bandit16
+nmap localhost -p31000-32000
+nc localhost 31790
+ncat --ssl localhost 31790
+```
