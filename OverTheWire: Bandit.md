@@ -145,4 +145,24 @@ cat /etc/bandit_pass/bandit16
 nmap localhost -p31000-32000
 nc localhost 31790
 ncat --ssl localhost 31790
+vim key
+chmod 400 key
+ssh -i key bandit17@localhost
 ```
+
+## Level 17 -> Level 18
+
+```bash
+diff passwords.old passwords.new
+```
+
+## Level 18 -> Level 19
+
+```bash
+ssh bandit18@bandit.labs.overthewire.org -p 2220 -t /bin/sh
+ls
+cat readme
+```
+
+
+
