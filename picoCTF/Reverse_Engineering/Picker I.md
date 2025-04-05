@@ -1,4 +1,4 @@
-# Picker I.md
+# Picker I
 
 ## Chalenge Description
 
