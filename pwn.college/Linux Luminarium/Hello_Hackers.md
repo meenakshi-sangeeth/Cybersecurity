@@ -31,3 +31,17 @@ The task required me to run the hello command with a single argument hackers. I 
 I typed in the following command:
 `hello hackers`
 Once I typed it in and hit Enter, I received the flag.
+
+## 3. Command History
+
+### Challenge
+
+The challenge was to obtain the flag by accessing the history of invoked commands
+
+### Thought Process
+
+To complete this challenge, I need to go through the history of invoked commands using up/down arrow keys
+
+### Solution
+
+I recieved the flag on entering the up arrow key
