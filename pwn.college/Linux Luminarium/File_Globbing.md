@@ -114,7 +114,79 @@ I recalled that if the first character in the brackets is a `!` or (in newer ver
 
 I used the following commands
 ```bash
- cd /challenge/files
+cd /challenge/files
 /challenge/run [!pwn]*
 ```
 Upon execution, I got the flag
+
+## 7. Multiple Globs
+
+### Challenge
+
+To collect the flag by running `/challenge/run` in `/challenge/files`, providing a single argument of 3 characters or less, that covers every word that contains the letter p
+
+### Thought Process
+
+Bash supports the expansion of multiple globs in a single word. Thus I can use `*` glob before and after the letter p thereby covering every word containing the letter p
+
+### Solution
+
+I used the following commands
+```bash
+cd /challenge/files
+/challenge/run *p*
+```
+Upon execution, I got the flag
+
+## 8. Tab Completion
+
+### Challenge
+
+To collect the flag by reading `/challenge/pwncollege` using tab completion
+
+### Thought Process
+
+Files can be specified by entering <TAB> in the shell, which will try to figure out what you're going to type and automatically complete it
+
+### Solution
+
+```bash
+cat /challenge/p<TAB>
+```
+
+## 9. Multiple Options for Tab Completion
+
+### Challenge
+
+To collect the flag using tab completion from `/challenge/files`, which has a bunch of files starting with `pwncollege`
+
+### Thought Process
+
+When there are multiple options for tab completion, by default bash will auto-expand until the first point. When you hit tab a second time, it'll print out those options
+
+### Solution
+
+```bash
+~$ cat /challenge/p<TAB><TAB>
+pwn                    pwncollege-family      pwncollege-flyswatter
+pwn-college            pwncollege-flag        pwncollege-hacking
+pwn-the-planet         pwncollege-flamingo
+~$ cat /challenge/pwncollege-flag
+```
+
+## 10. Tab Completion on commands
+
+### Challenge
+
+To collect the flag by tab-completing a command that starts with `pwncollege`
+
+### Thought Process
+
+Commands can also be auto completed using the tab key just like for files
+
+### Solution
+
+```bash
+pwncollege<TAB>
+```
+
