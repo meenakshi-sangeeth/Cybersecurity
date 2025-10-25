@@ -13,10 +13,12 @@ This problem can be solved by just opening the file in different ways
 
 The file was a pdf when opened showed a string which seemed to be the last part of the flag. 
 
-![image](https://github.com/user-attachments/assets/6f9a5aa3-5322-4386-8d8e-61e7ef7f5fdd)
+```bash
+1n_pn9_&_pdf_53b741d6}
+```
 
 Guided by the hint, I changed the extension of the file from `pdf` to `png` and voilà I got the first part of the flag
 
-![image](https://github.com/user-attachments/assets/697ee1dc-1376-41f4-bf70-815f15e2f0e2)
+<img width="50" height="50" alt="flag2of2-final" src="https://github.com/user-attachments/assets/88481ad1-1d1a-4e17-8258-db0d5af7b49d" />
 
-Thus the flag for this challenge is `picoCTF{f1u3n7_1n_pn9_&_pdf_53b741d6}`
+Thus, the flag for this challenge is `picoCTF{f1u3n7_1n_pn9_&_pdf_53b741d6}`
