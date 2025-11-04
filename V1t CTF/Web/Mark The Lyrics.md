@@ -1,6 +1,5 @@
 ## Challenge
 
-MCK
 My friend make a website for his favourite, but the lyrics seem a little bit odd
 http://tommytheduck.github.io/mckey
 
