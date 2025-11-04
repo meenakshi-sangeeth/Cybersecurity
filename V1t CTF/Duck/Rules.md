@@ -1,4 +1,4 @@
-<img width="1699" height="836" alt="image" src="https://github.com/user-attachments/assets/143a3813-6fc9-40c9-b0f3-b5f837cbc3a7" />## Challenge
+## Challenge
 
 Read the rules brother please :<
 
