@@ -69,6 +69,7 @@ From the source code I got the username and password hashes which were cracked u
 ```
 
 Username hash: `ba773c013e5c07e8831bdb2f1cee06f349ea1da550ef4766f5e7f7ec842d836e`
+
 Password hash: `48d2a5bbcf422ccd1b69e2a82fb90bafb52384953e77e304bef856084be052b6`
 
 <img width="1267" height="82" alt="image" src="https://github.com/user-attachments/assets/6c2870b9-0240-449b-ab94-68bbc721319d" />
