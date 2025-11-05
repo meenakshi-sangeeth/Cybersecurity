@@ -1,6 +1,7 @@
 ## Challenge
 
 Poke it the right way and it hums back something useful.
+
 nc chall.v1t.site 30210
 
 ## Solution
