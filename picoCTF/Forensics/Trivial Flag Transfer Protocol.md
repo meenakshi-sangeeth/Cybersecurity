@@ -47,7 +47,7 @@ IUSEDTHEPROGRAMANDHIDITWITH-DUEDILIGENCE.CHECKOUTTHEPHOTOS
 
 The flag is hidden in the image so now I had to checkout the photos with the help of `steghide`. For that I executed the following commands
 ```bash
-root@MeenakshiSangeeth:/mnt/c/Users/Meenakshi Sangeeth/Downloads# steghide --help
+~ steghide --help
 steghide version 0.5.1
 
 the first argument must be one of the following:
@@ -98,16 +98,16 @@ options for the info command:
 
 To embed emb.txt in cvr.jpg: steghide embed -cf cvr.jpg -ef emb.txt
 To extract embedded data from stg.jpg: steghide extract -sf stg.jpg
-root@MeenakshiSangeeth:/mnt/c/Users/Meenakshi Sangeeth/Downloads# steghide extract -sf picturel.bmp
+~ steghide extract -sf picturel.bmp
 Enter passphrase:
 steghide: could not open the file "picturel.bmp".
-root@MeenakshiSangeeth:/mnt/c/Users/Meenakshi Sangeeth/Downloads# steghide extract-sf picturel.bmp -p DUEDILIGENCE
+~ steghide extract-sf picturel.bmp -p DUEDILIGENCE
 steghide: could not open the file "picturel.bmp".
-root@MeenakshiSangeeth:/mnt/c/Users/Meenakshi Sangeeth/Downloads# steghide extract -sf picture2.bmp -p DUEDILIGENCE
+~ steghide extract -sf picture2.bmp -p DUEDILIGENCE
 steghide: could not extract any data with that passphrase!
-root@MeenakshiSangeeth:/mnt/c/Users/Meenakshi Sangeeth/Downloads# steghide extract of picture3.bmpp DUEDILIGENCE
+~ steghide extract of picture3.bmpp DUEDILIGENCE
 wrote extracted data to "flag.txt".
-root@MeenakshiSangeeth:/mnt/c/Users/Meenakshi Sangeeth/Downloads# cat flag.txt
+~ cat flag.txt
 picoCTF{h1dd3n In pLaln 51GHT 18375919}
 ```
 
